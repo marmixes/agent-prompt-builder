@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.3.1 — 2026-10-18
+- Self-check: options only when the owner asked; overwrite/delete actions off by default with a risk and test; "with tests" means a passing-tests requirement (found by the first Hermes test on a local model).
+
 ## 3.3.0 — 2026-10-18
 - One strict template for every agent job (`templates/general-template.md`): GOAL as "Your task is to … so that …", 8 STRICT RULES (scope, baseline first, research first, proof, no guessing, no secrets, stop), SPECIFICS (inputs, outputs, options with defaults, exclusions, data types, environment, compatibility target), APPROACH, RISKS, WORKING BEHAVIOUR, BEFORE YOU FINISH; ROLLBACK for infra and real devices; PHASES and FIRST DELIVERABLE for big projects. Every block is always present; small jobs use fewer lines per block.
 - Medium form for OpenCode, Hermes, OpenClaw and local models: the same rules in fewer words.
