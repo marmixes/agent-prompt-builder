@@ -3,7 +3,7 @@ name: agent-prompt-builder
 description: Builds a strict, precise, verified prompt for an AI agent or any LLM (Claude Code, OpenCode, Hermes, OpenClaw, Codex, a local model) from the owner's goal - coding, ML, research, security, big projects, app system prompts, JSON extraction, summaries, writing. Every fact is verified or marked UNVERIFIED; a lint script checks the result. Use when the owner asks for a prompt, system prompt, task brief, project plan or agent instructions, or asks to improve or check a prompt.
 license: MIT
 metadata:
-  version: "3.3.0"
+  version: "3.3.1"
   opencode/slash: "true"
 ---
 
