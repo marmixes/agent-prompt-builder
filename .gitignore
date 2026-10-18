@@ -1,0 +1,7 @@
+# Personal environment profile: never commit
+lab-profile.md
+**/lab-profile.md
+.env
+*.key
+.DS_Store
+__pycache__/
