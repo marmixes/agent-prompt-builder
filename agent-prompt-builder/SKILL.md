@@ -185,7 +185,10 @@ Rules for filling it:
 
 - [ ] Goal understood (spelling corrected, meaning unchanged) and written as "Your task is to … so that …".
 - [ ] Only approved content in the prompt; improvements were offered as SUGGESTIONS.
-- [ ] Target agent's form, task-type preset and job-type working behaviour used.
+- [ ] Every option, flag and default was asked for by the owner; anything else is in SUGGESTIONS.
+- [ ] Any action that can overwrite or delete data defaults to off and has its own RISKS line and test.
+- [ ] If the owner asked for tests, a requirement says the tests pass (test command → exit 0).
+- [ ] Target agent's form, task-type preset and job-type working behavior used.
 - [ ] STRICT RULES present; role is one sentence of expertise; no model-identity or hype lines.
 - [ ] SPECIFICS complete (inputs, outputs, options with defaults, exclusions, data types, environment, compatibility target; `n/a` where not applicable).
 - [ ] Every path, command, version, model ID, data type, repo and URL verified or marked UNVERIFIED; correct machine/container named.
