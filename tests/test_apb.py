@@ -147,16 +147,16 @@ class TestApb(unittest.TestCase):
 
     def test_api_key_sent_but_never_printed(self):
         Fake.replies = [PLAN, GOOD]
-        env = dict(os.environ, APB_API_KEY="sk-test-SECRET-123")
+        env = dict(os.environ, APB_API_KEY="fake-test-value-123")
         p = subprocess.run([sys.executable, "-I", os.path.join(SCRIPTS, "apb.py"), "--yes",
                             "--base-url", self.url, "--out", self.tmp.name, "add health endpoint"],
                            capture_output=True, text=True, env=env, timeout=60)
         self.assertEqual(p.returncode, 0, p.stderr)
-        self.assertEqual(Fake.seen[0]["auth"], "Bearer sk-test-SECRET-123")
-        self.assertNotIn("SECRET-123", p.stdout + p.stderr)
+        self.assertEqual(Fake.seen[0]["auth"], "Bearer fake-test-value-123")
+        self.assertNotIn("fake-test-value", p.stdout + p.stderr)
         for f in os.listdir(self.tmp.name):
             with open(os.path.join(self.tmp.name, f), encoding="utf-8") as fh:
-                self.assertNotIn("SECRET-123", fh.read())
+                self.assertNotIn("fake-test-value", fh.read())
 
     def test_server_error_is_reported(self):
         Fake.replies = []
